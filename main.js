@@ -1,4 +1,4 @@
-let randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt((Math.random() * 100) + 1);
 let inputBar = document.querySelector(".input-bar");
 const guessBtn = document.querySelector(".guess-button");
 let guessedNumber = [];
@@ -15,7 +15,7 @@ function addGuesses(inputedNum) {
   guessedNumber.push(inputedNum);
 }
 function showGuesses(inputedNum) {
-  document.querySelector(".prev-guess").innerHTML += inputedNum + "";
+  document.querySelector(".prev-guess").innerHTML += inputedNum + " ";
 }
 function comment(message) {
   document.querySelector(".message").innerHTML = message;
@@ -73,13 +73,13 @@ function newGame() {
   start();
   comment("");
   livesRemain("10");
-  document.querySelector(".prev-guess").innerHTML = "";
+  document.querySelector(".prev-guess").innerHTML = " ";
 }
 function stopGame() {
   inputBar.setAttribute("disabled", "");
   comment("Ouch you messed up hommie" + randomNumber);
 }
 function begin() {
-  inputBar.setAttribute("disables", "");
+  inputBar.setAttribute("disabled", "");
 }
 begin();
