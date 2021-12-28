@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+.header {
+  padding: 20px;
+  font-size: 60px;
+  font-weight: 400;
+}
+.container {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: #ffffff;
+}
+.note {
+  font-size: 20px;
+}
+.note-two {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.game-box {
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  background: rgba(10, 10, 10, 0.274);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 1.5;
+  margin: 20px auto;
+  box-shadow: 10px 10px 50px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 50px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 50px -3px rgba(0, 0, 0, 0.75);
+}
+h3 {
+  font-size: 40px;
+  font-weight: 300;
+}
+.input-bar {
+  margin: 20px auto;
+  height: 40px;
+  font-family: inherit;
+  width: 200px;
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.475);
+}
+.guess-button {
+  height: 30px;
+  width: 100px;
+  font-family: inherit;
+  border-radius: 7px;
+  border: none;
+  margin: 5px auto;
+  cursor: pointer;
+  box-shadow: 10px 10px 23px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 23px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 23px 3px rgba(0, 0, 0, 0.75);
+}
+.restart {
+  margin: 8px auto;
+  border: 1px solid #ffffff;
+  width: 200px;
+  padding: 2px;
+  cursor: pointer;
+}
+.guess-button:hover {
+  background: #0c3753;
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: 0.6s ease-in;
+}
+.restart:hover {
+  color: #0c3753;
+  transition: 0.6s ease-in;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1030px) {
+  .game-box {
+    margin: 50px auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    font-size: 40px;
+  }
+  .game-box {
+    width: 350px;
+  }
+}
