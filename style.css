@@ -98,5 +98,6 @@ h3 {
   }
   .game-box {
     width: 350px;
+    margin: 10px auto;
   }
 }
