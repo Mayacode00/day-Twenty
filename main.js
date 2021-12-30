@@ -1,4 +1,4 @@
-let randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 50 + 1);
 let inputBar = document.querySelector(".input-bar");
 const guessBtn = document.querySelector(".guess-button");
 let guessedNumber = [];
@@ -32,7 +32,7 @@ function rangeCheck(inputedNum) {
   } else if (inputedNum < 1) {
     alert("Awwww you arent clearly ready, thats too low");
   } else if (inputedNum > 100) {
-    alert("wow wow wow!!!,not this high hommie..take it easy on me okay?");
+    alert("wow wow wow!!!,not this high homie");
   } else {
     addGuesses(inputedNum);
     showGuesses(inputedNum);
@@ -51,7 +51,7 @@ function reviewGuess(inputedNum) {
     }
     livesRemain(10 - usedLive);
   } else if (inputedNum < randomNumber) {
-    comment("You guessed too low hommie!!");
+    comment("You guessed too low");
     usedLive++;
     if (usedLive === 10) {
       stopGame();
@@ -60,12 +60,12 @@ function reviewGuess(inputedNum) {
     }
     livesRemain(10 - usedLive);
   } else {
-    comment("Yaaaaaayyyy hommie you finally got it");
+    comment("Yaaaaaayyyy you finally got it");
     begin();
   }
 }
 function restart() {
-  randomNumber = parseInt(Math.random() * 100 + 1);
+  randomNumber = parseInt(Math.random() * 50 + 1);
   document.querySelector(".restart").value = "Restart Game";
   guessedNumber = [];
   inputBar.removeAttribute("disabled", "");
@@ -77,7 +77,7 @@ function restart() {
 }
 function stopGame() {
   inputBar.setAttribute("disabled", "");
-  comment("Ouch you messed up hommie,here is the number" + randomNumber);
+  comment("Ouch now I'm sad,here is the number" + randomNumber);
 }
 function begin() {
   inputBar.setAttribute("disabled", "");
